@@ -56,9 +56,10 @@ namespace radio
         }
         private void kapat(object sender,FormClosingEventArgs e) 
         {
-            wçýktý.Stop();
-            wçýktý.Dispose();
-            mokuyucu.Dispose();
+                wçýktý?.Stop();
+                wçýktý?.Dispose();
+                mokuyucu?.Dispose();
+            
         }
     }
 }
