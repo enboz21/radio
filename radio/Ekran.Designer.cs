@@ -53,13 +53,14 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(384, 62);
+            ClientSize = new Size(382, 51);
             Controls.Add(url);
             Controls.Add(s_s);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Ekran";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ekran";
+            FormClosing += kapat;
             ResumeLayout(false);
             PerformLayout();
         }
