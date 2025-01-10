@@ -60,6 +60,7 @@
             Name = "Ekran";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ekran";
+            FormClosing += kapat;
             ResumeLayout(false);
             PerformLayout();
         }

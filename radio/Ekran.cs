@@ -28,10 +28,12 @@ namespace radio
                 {
                     if (esurl.Equals(urll))
                     {
+                        //çalmaya baþlatýr
                         wçýktý.Play();
                     }
                     else
                     {
+                        //yeni bir urele gelirse onu yükler
                         mokuyucu = new MediaFoundationReader(urll);
                         wçýktý = new WaveOutEvent();
                         wçýktý.Init(mokuyucu);
@@ -51,6 +53,12 @@ namespace radio
                 MessageBox.Show($"bir hata var :\n {ex.Message}","hata",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
+        }
+        private void kapat(object sender,FormClosingEventArgs e) 
+        {
+            wçýktý.Stop();
+            wçýktý.Dispose();
+            mokuyucu.Dispose();
         }
     }
 }
